@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>اختر موقعًا</title>
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3IUCWPXWVSC9qKMQpa142ECZ1B2XG4_8=places"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        let map, marker;
+
+        function initMap() {
+            const center = { lat: 30.5, lng: 47.8 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: center
+            });
+
+            marker = new google.maps.Marker({
+                position: center,
+                map: map,
+                draggable: true
+            });
+
+            map.addListener("click", function (e) {
+                marker.setPosition(e.latLng);
+                getPlaceName(e.latLng);
+            });
+        }
+
+        function getPlaceName(latlng) {
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ location: latlng }, (results, status) => {
+                if (status === "OK") {
+                    if (results[0]) {
+                        const placeName = results[0].formatted_address;
+                        chrome.webview.postMessage(placeName);
+                    }
+                }
+            });
+        }
+
+        window.onload = initMap;
+    </script>
+</body>
+</html>

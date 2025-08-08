@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvanteSystem", "EvanteSystem\EvanteSystem.csproj", "{DBA64A57-0021-4757-A57E-7C5EE8BEC52B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4DDC78C-5F1D-4FD7-9ACB-D590F67E68F3}"
+	ProjectSection(SolutionItems) = preProject
+		map.html = map.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBA64A57-0021-4757-A57E-7C5EE8BEC52B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA64A57-0021-4757-A57E-7C5EE8BEC52B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA64A57-0021-4757-A57E-7C5EE8BEC52B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA64A57-0021-4757-A57E-7C5EE8BEC52B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAE12962-65D5-4A31-BF1C-BCCEC367607F}
+	EndGlobalSection
+EndGlobal
